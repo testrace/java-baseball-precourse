@@ -31,8 +31,20 @@ class NumberTest {
         ThrowableAssert.ThrowingCallable actual = () -> new Number(value);
 
         //then
-        assertThatThrownBy(actual).isInstanceOf(NumberRangeException.class)
+        assertThatThrownBy(actual).isInstanceOf(NumberException.class)
                 .hasMessage("숫자의 유효범위는 1~9 입니다.");
+    }
+
+    @Test
+    @DisplayName("숫자 객체 문자열 예외")
+    void construct_string_exception() {
+
+        //when
+        ThrowableAssert.ThrowingCallable actual = () -> new Number("일");
+
+        //then
+        assertThatThrownBy(actual).isInstanceOf(NumberException.class)
+                .hasMessage("숫자만 입력 가능합니다.");
     }
 
 }

@@ -14,9 +14,21 @@ public class Number {
         this.value = value;
     }
 
+    public Number(String value) {
+        this(parseInt(value));
+    }
+
+    private static int parseInt(String value) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException ex) {
+            throw new NumberException("숫자만 입력 가능합니다.");
+        }
+    }
+
     private void validate(int value) {
         if (!isValid(value)) {
-            throw new NumberRangeException();
+            throw new NumberException();
         }
     }
 
