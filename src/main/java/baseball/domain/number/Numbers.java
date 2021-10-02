@@ -9,7 +9,7 @@ public class Numbers {
 
     private final List<Number> numbers;
 
-    private Numbers(List<Number> numbers) {
+    public Numbers(List<Number> numbers) {
         validate(numbers);
         this.numbers = numbers;
     }
@@ -50,6 +50,10 @@ public class Numbers {
 
     public int position(int number) {
         return numbers.indexOf(new Number(number));
+    }
+
+    public List<Number> numbers() {
+        return Collections.unmodifiableList(numbers);
     }
 
     @Override
