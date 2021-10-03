@@ -34,7 +34,7 @@ class NumbersTest {
     void construct_exception(String numbers) {
         //when
         ThrowableAssert.ThrowingCallable actual = () -> Numbers.of(numbers);
-        System.out.println("numbers = " + numbers);
+
         //then
         assertThatThrownBy(actual).isInstanceOf(NumbersException.class)
                 .hasMessage("숫자 3개만 생성 가능합니다.");
@@ -50,7 +50,6 @@ class NumbersTest {
     void construct_duplicate_number_exception(String numbers) {
         //when
         ThrowableAssert.ThrowingCallable actual = () -> Numbers.of(numbers);
-        System.out.println("numbers = " + numbers);
         //then
         assertThatThrownBy(actual).isInstanceOf(NumbersException.class)
                 .hasMessage("중복된 숫자로 생성할 수 없습니다.");
