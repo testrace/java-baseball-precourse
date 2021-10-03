@@ -2,6 +2,7 @@ package baseball;
 
 import baseball.controller.BaseBallGame;
 import baseball.domain.baseball.GuessResult;
+import baseball.domain.number.NumberException;
 import baseball.domain.number.NumbersException;
 import baseball.ui.InputView;
 import baseball.ui.ResultView;
@@ -34,7 +35,7 @@ public class Application {
         String inputNumbers = InputView.inputNumbers();
         try {
             return baseBallGame.guess(inputNumbers);
-        } catch (NumbersException ex) {
+        } catch (NumbersException | NumberException ex) {
             System.err.println(ERROR_INPUT);
             return getGuessResult(baseBallGame);
         }
