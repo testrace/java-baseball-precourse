@@ -3,6 +3,7 @@ package baseball.ui;
 import baseball.domain.baseball.GuessResult;
 
 public enum ResultMessage {
+
     STRIKE_AND_BALL("%d스트라이크 %d볼", guessResult -> guessResult.strike() > 0 && guessResult.ball() > 0),
     STRIKE("%d스트라이크", guessResult -> guessResult.strike() > 0 && guessResult.ball() == 0),
     BALL("%d볼", guessResult -> guessResult.strike() == 0 && guessResult.ball() > 0),
