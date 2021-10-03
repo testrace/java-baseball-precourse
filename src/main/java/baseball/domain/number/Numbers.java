@@ -48,7 +48,7 @@ public class Numbers {
         }
     }
 
-    public int position(int number) {
+    public int location(String number) {
         return numbers.indexOf(new Number(number));
     }
 

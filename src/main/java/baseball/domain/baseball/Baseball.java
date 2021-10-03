@@ -16,6 +16,16 @@ public class Baseball {
         this(Numbers.of(numbers));
     }
 
+    public GuessResult guess(String guessNumbers) {
+        GuessResult guessResult = new GuessResult();
+        String[] strings = guessNumbers.split("");
+        for (int i = 0; i < strings.length; i++) {
+            int location = numbers.location(strings[i]);
+            guessResult = guessResult.addResult(GuessState.of(i, location));
+        }
+        return guessResult;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
