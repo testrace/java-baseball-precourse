@@ -1,6 +1,7 @@
 package baseball.domain.baseball;
 
 public enum GuessState {
+
     STRIKE(GuessState::isStrike),
     BALL(GuessState::isBall),
     NOTHING((number, location) -> true);
@@ -31,5 +32,6 @@ public enum GuessState {
         }
         return guessLocation != location;
     }
+
 }
 

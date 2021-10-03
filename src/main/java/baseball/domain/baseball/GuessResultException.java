@@ -7,4 +7,5 @@ public class GuessResultException extends RuntimeException {
     public GuessResultException(int value) {
         super(String.format(DEFAULT_MESSAGE, value));
     }
+
 }

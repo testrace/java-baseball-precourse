@@ -39,5 +39,4 @@ class NumberSelectionTest {
         assertThat(actual).hasSize(expected);
     }
 
-
 }

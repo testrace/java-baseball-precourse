@@ -44,4 +44,5 @@ public class BaseBall {
     public int hashCode() {
         return Objects.hash(numbers);
     }
+
 }

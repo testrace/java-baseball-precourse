@@ -50,4 +50,5 @@ public class GuessResult {
     public boolean isMaxStrike() {
         return strike == MAX;
     }
+
 }
