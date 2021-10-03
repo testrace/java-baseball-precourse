@@ -3,7 +3,6 @@ package baseball.controller;
 import baseball.domain.baseball.BaseBall;
 import baseball.domain.baseball.GuessResult;
 import baseball.domain.baseball.NumberSelection;
-import baseball.domain.number.NumbersException;
 
 public class BaseBallGame {
 
@@ -15,7 +14,7 @@ public class BaseBallGame {
         end = false;
     }
 
-    public GuessResult guess(String numbers) throws NumbersException {
+    public GuessResult guess(String numbers) {
         GuessResult guess = baseball.guess(numbers);
         end = guess.isMaxStrike();
         return guess;
