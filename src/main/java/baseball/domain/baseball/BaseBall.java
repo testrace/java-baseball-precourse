@@ -1,6 +1,7 @@
 package baseball.domain.baseball;
 
 import baseball.domain.number.Numbers;
+import baseball.domain.number.NumbersException;
 
 import java.util.Objects;
 
@@ -16,7 +17,8 @@ public class BaseBall {
         this(Numbers.of(numbers));
     }
 
-    public GuessResult guess(String guessNumbers) {
+    public GuessResult guess(String guessNumbers) throws NumbersException {
+        validateGuessNumber(guessNumbers);
         GuessResult guessResult = new GuessResult();
         String[] strings = guessNumbers.split("");
         for (int i = 0; i < strings.length; i++) {
@@ -24,6 +26,10 @@ public class BaseBall {
             guessResult = guessResult.addResult(GuessState.of(i, location));
         }
         return guessResult;
+    }
+
+    private void validateGuessNumber(String guessNumbers) throws NumbersException {
+        Numbers.of(guessNumbers);
     }
 
     @Override
