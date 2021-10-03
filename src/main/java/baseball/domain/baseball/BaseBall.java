@@ -4,15 +4,15 @@ import baseball.domain.number.Numbers;
 
 import java.util.Objects;
 
-public class Baseball {
+public class BaseBall {
 
     private final Numbers numbers;
 
-    public Baseball(Numbers numbers) {
+    public BaseBall(Numbers numbers) {
         this.numbers = numbers;
     }
 
-    public Baseball(String numbers) {
+    public BaseBall(String numbers) {
         this(Numbers.of(numbers));
     }
 
@@ -30,7 +30,7 @@ public class Baseball {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Baseball baseball = (Baseball) o;
+        BaseBall baseball = (BaseBall) o;
         return Objects.equals(numbers, baseball.numbers);
     }
 

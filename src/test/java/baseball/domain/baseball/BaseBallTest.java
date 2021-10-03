@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-class BaseballTest {
+class BaseBallTest {
 
     @Test
     @DisplayName("객체 생성")
@@ -17,10 +17,10 @@ class BaseballTest {
         String numbers = "123";
 
         //when
-        Baseball actual = new Baseball(numbers);
+        BaseBall actual = new BaseBall(numbers);
 
         //then
-        assertThat(actual).isEqualTo(new Baseball(numbers));
+        assertThat(actual).isEqualTo(new BaseBall(numbers));
     }
 
     @ParameterizedTest(name = "숫자 맞히기 결과 {index} [{arguments}]")
@@ -35,7 +35,7 @@ class BaseballTest {
     })
     void guess(String numbers, String guessNumbers, int expectedStrike, int expectedBall) {
         //given
-        Baseball baseball = new Baseball(numbers);
+        BaseBall baseball = new BaseBall(numbers);
         GuessResult guessResult = baseball.guess(guessNumbers);
 
         //then
