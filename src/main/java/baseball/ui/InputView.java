@@ -5,7 +5,7 @@ import nextstep.utils.Console;
 public class InputView {
 
     private static final String INPUT_NUMBERS = "숫자를 입력해주세요 : ";
-    private static final String CONTINUE_GAME = "3개의 숫자를 모두 맞히셨습니다! 게임 끝\n게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
+    private static final String CONTINUE_GAME = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
     private static final String CONTINUE_GAME_WRONG = "잘못 입력하셨습니다 다시 입력해주세요. ";
     private static final String CONTINUE = "1";
     private static final String EXIT = "2";
