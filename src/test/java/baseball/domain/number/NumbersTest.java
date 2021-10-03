@@ -4,6 +4,7 @@ import org.assertj.core.api.ThrowableAssert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -50,9 +51,25 @@ class NumbersTest {
     void construct_duplicate_number_exception(String numbers) {
         //when
         ThrowableAssert.ThrowingCallable actual = () -> Numbers.of(numbers);
+
         //then
         assertThatThrownBy(actual).isInstanceOf(NumbersException.class)
                 .hasMessage("중복된 숫자로 생성할 수 없습니다.");
+    }
+
+    @ParameterizedTest(name = "숫자의 위치 {index} [{arguments}]")
+    @CsvSource(value = {
+            "123,1,0",
+            "123,2,1",
+            "123,4,-1",
+    })
+    void location(String numbers, String number, int expected) {
+        //when
+        int actual = Numbers.of(numbers)
+                .location(number);
+
+        //then
+        assertThat(actual).isEqualTo(expected);
     }
 
 }
