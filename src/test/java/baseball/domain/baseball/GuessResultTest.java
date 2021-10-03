@@ -40,6 +40,23 @@ class GuessResultTest {
     }
 
     @Test
+    @DisplayName("3스트라이크 게임종료")
+    void three_strike() {
+        //given
+        GuessResult guessResult = new GuessResult()
+                .addResult(GuessState.STRIKE)
+                .addResult(GuessState.STRIKE)
+                .addResult(GuessState.STRIKE);
+
+        //when
+        boolean actual = guessResult.isMaxStrike();
+
+        //then
+        assertThat(actual).isTrue();
+
+    }
+
+    @Test
     @DisplayName("볼")
     void ball() {
         //given
