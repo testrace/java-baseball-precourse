@@ -2,6 +2,8 @@ package baseball.domain.baseball;
 
 public class GuessResult {
 
+    private static final int MAX_STRIKE_COUNT = 3;
+
     private final int strike;
     private final int ball;
 
@@ -34,5 +36,9 @@ public class GuessResult {
 
     public boolean isNothing() {
         return strike == 0 && ball == 0;
+    }
+
+    public boolean isMaxStrike() {
+        return strike == MAX_STRIKE_COUNT;
     }
 }

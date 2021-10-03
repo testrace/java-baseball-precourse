@@ -17,9 +17,7 @@ public class BaseBallGame {
 
     public GuessResult guess(String numbers) throws NumbersException {
         GuessResult guess = baseball.guess(numbers);
-        if (guess.strike() == 3) {
-            end = true;
-        }
+        end = guess.isMaxStrike();
         return guess;
     }
 
