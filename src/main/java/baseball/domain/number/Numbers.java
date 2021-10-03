@@ -6,6 +6,8 @@ public class Numbers {
 
     private static final int SIZE = 3;
     private static final String STRING_DELIMITER = "";
+    private static final String WRONG_SIZE_MESSAGE = "숫자 3개만 생성 가능합니다.";
+    private static final String DUPLICATION_MESSAGE = "중복된 숫자로 생성할 수 없습니다.";
 
     private final List<Number> numbers;
 
@@ -16,7 +18,7 @@ public class Numbers {
 
     private void validate(List<Number> numbers) {
         if (numbers.size() != SIZE) {
-            throw new NumbersException("숫자 3개만 생성 가능합니다.");
+            throw new NumbersException(WRONG_SIZE_MESSAGE);
         }
     }
 
@@ -37,14 +39,14 @@ public class Numbers {
 
     private static void validateLength(String numbers) {
         if (numbers == null || numbers.length() != SIZE) {
-            throw new NumbersException("숫자 3개만 생성 가능합니다.");
+            throw new NumbersException(WRONG_SIZE_MESSAGE);
         }
     }
 
     private static void validateDuplication(String[] split) {
         Set<String> duplicate = new LinkedHashSet<>(Arrays.asList(split));
         if (split.length != duplicate.size()) {
-            throw new NumbersException("중복된 숫자로 생성할 수 없습니다.");
+            throw new NumbersException(DUPLICATION_MESSAGE);
         }
     }
 

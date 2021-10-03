@@ -6,6 +6,7 @@ public class Number {
 
     private static final int MIN = 1;
     private static final int MAX = 9;
+    private static final String WRONG_NUMBER_MESSAGE = "숫자만 입력 가능합니다.";
 
     private final int value;
 
@@ -22,7 +23,7 @@ public class Number {
         try {
             return Integer.parseInt(value);
         } catch (NumberFormatException ex) {
-            throw new NumberException("숫자만 입력 가능합니다.");
+            throw new NumberException(WRONG_NUMBER_MESSAGE);
         }
     }
 
