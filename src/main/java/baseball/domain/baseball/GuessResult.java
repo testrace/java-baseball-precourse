@@ -2,14 +2,23 @@ package baseball.domain.baseball;
 
 public class GuessResult {
 
-    private static final int MAX_STRIKE_COUNT = 3;
+    private static final int MIN = 0;
+    private static final int MAX = 3;
 
     private final int strike;
     private final int ball;
 
     private GuessResult(int strike, int ball) {
+        validate(strike);
+        validate(ball);
         this.strike = strike;
         this.ball = ball;
+    }
+
+    private void validate(int value) {
+        if (value < MIN || value > MAX) {
+            throw new GuessResultException(value);
+        }
     }
 
     public GuessResult() {
@@ -39,6 +48,6 @@ public class GuessResult {
     }
 
     public boolean isMaxStrike() {
-        return strike == MAX_STRIKE_COUNT;
+        return strike == MAX;
     }
 }
