@@ -22,7 +22,7 @@ public class GuessResult {
     }
 
     public GuessResult() {
-        this(0, 0);
+        this(MIN, MIN);
     }
 
     public GuessResult addResult(GuessState guessState) {
@@ -44,7 +44,7 @@ public class GuessResult {
     }
 
     public boolean isNothing() {
-        return strike == 0 && ball == 0;
+        return strike == MIN && ball == MIN;
     }
 
     public boolean isMaxStrike() {

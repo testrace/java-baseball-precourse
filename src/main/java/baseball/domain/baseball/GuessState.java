@@ -6,6 +6,8 @@ public enum GuessState {
     BALL(GuessState::isBall),
     NOTHING((number, location) -> true);
 
+    private static final int HAS_NO_NUMBER = -1;
+
     private final GuessStateOperator operator;
 
     GuessState(GuessStateOperator operator) {
@@ -27,7 +29,7 @@ public enum GuessState {
     }
 
     private static boolean isBall(int guessLocation, int location) {
-        if (location == -1) {
+        if (location == HAS_NO_NUMBER) {
             return false;
         }
         return guessLocation != location;
