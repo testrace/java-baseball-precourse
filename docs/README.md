@@ -39,18 +39,18 @@
 - [x] 사용자가 잘못된 값을 입력하면 IllegalArgumentException 예외를 발생시키며 애플리케이션은 종료된다.
 
 ### 프로그래밍 요구사항
-- [ ] 프로그램의 시작점은 baseball.Application#main 메서드이다.
-- [ ] JDK 8에서 동작해야한다.
-- [ ] JDK 에서 제공하는 Random 및 Scanner API를 사용하지 않고, camp.nextstep.edu.mistionutils 의 Random 과 Console API를 사용한다.
-- [ ] 기본으로 제공되는 2개의 Test Case가 성공해야 한다.
-- [ ] 자바 코드 컨벤션을 지키면서 프로그래밍한다.
-- [ ] 들여쓰기는 1단계만 허용한다.
-- [ ] JDK 8에 추가된 Stream API 는 사용하지 않는다. 람다 표현식은 사용가능하다.
-- [ ] else 예약어를 사용하지 않는다.
-- [ ] 메서드의 길이가 10라인을 넘지 않도록 한다.
-- [ ] 도메인 로직에 단위 테스트를 구현한다. 단, UI 로직은 제외한다.
+- [x] 프로그램의 시작점은 baseball.Application#main 메서드이다.
+- [x] JDK 8에서 동작해야한다.
+- [x] JDK 에서 제공하는 Random 및 Scanner API를 사용하지 않고, camp.nextstep.edu.mistionutils 의 Random 과 Console API를 사용한다.
+- [x] 기본으로 제공되는 2개의 Test Case가 성공해야 한다.
+- [x] 자바 코드 컨벤션을 지키면서 프로그래밍한다.
+- [x] 들여쓰기는 1단계만 허용한다.
+- [x] JDK 8에 추가된 Stream API 는 사용하지 않는다. 람다 표현식은 사용가능하다.
+- [x] else 예약어를 사용하지 않는다.
+- [x] 메서드의 길이가 10라인을 넘지 않도록 한다.
+- [x] 도메인 로직에 단위 테스트를 구현한다. 단, UI 로직은 제외한다.
 
 ### 과제 진행 요구사항
-- [ ] docs/README.md 파일에 구현할 기능 목록을 정리해 추가한다.
-- [ ] commit 단위는 앞서 작성한 기능 목록 단위 또는 의미 있는 단위로 Commit 한다.
-    - [ ] 커밋 메시지 컨벤션을 참고한다.
+- [x] docs/README.md 파일에 구현할 기능 목록을 정리해 추가한다.
+- [x] commit 단위는 앞서 작성한 기능 목록 단위 또는 의미 있는 단위로 Commit 한다.
+    - [x] 커밋 메시지 컨벤션을 참고한다.
