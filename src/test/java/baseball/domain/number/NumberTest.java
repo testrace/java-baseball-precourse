@@ -24,4 +24,5 @@ class NumberTest {
 
         assertThatThrownBy(throwingCallable).isInstanceOf(IllegalArgumentException.class);
     }
+
 }

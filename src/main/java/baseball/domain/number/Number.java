@@ -1,6 +1,12 @@
 package baseball.domain.number;
 
+import java.util.Objects;
+
 public class Number {
+
+
+    public static final int MIN = 1;
+    public static final int MAX = 9;
 
     private final int value;
 
@@ -12,10 +18,25 @@ public class Number {
         return NumberCache.from(value);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Number number = (Number) o;
+        return value == number.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
+    }
+
     private static class NumberCache {
 
-        static final int MIN = 1;
-        static final int MAX = 9;
         static final Number[] CACHE_NUMBERS;
 
         static {
