@@ -32,6 +32,6 @@ class LocationTest {
     void invalidLocationRange(int value) {
         assertThatThrownBy(() -> Location.from(value))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("숫자의 위치는 1, 2, 3 중 하나만 가능합니다. 현재 위치: " + value);
+                .hasMessage("위치는 1, 2, 3 중 하나만 가능합니다. 현재 위치 값: " + value);
     }
 }

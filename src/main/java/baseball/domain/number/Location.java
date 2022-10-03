@@ -28,6 +28,6 @@ public enum Location {
             return LOCATION_CACHE.get(value);
         }
 
-        throw new IllegalArgumentException("위치는 1, 2, 3 중 하나만 가능합니다. 현재 위치: " + value);
+        throw new IllegalArgumentException("위치는 1, 2, 3 중 하나만 가능합니다. 현재 위치 값: " + value);
     }
 }
